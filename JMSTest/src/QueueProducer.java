@@ -2,7 +2,6 @@ import javax.jms.JMSException;
 import javax.jms.Queue;
 import javax.jms.QueueConnection;
 import javax.jms.QueueConnectionFactory;
-import javax.jms.QueueReceiver;
 import javax.jms.QueueSender;
 import javax.jms.QueueSession;
 import javax.jms.TextMessage;
@@ -23,7 +22,7 @@ public class QueueProducer {
 			connection.start();
 //		
 			QueueProducer producer = new QueueProducer();
-			producer.sendMsg(" Knok knok... messages arrived wao..testing ", session, queue);			
+			producer.sendMsg(" Hello... messages arrived ... ", session, queue);			
 			System.out.println("*** ending Queue Producer example : msg send successfully *** ");
 		}
 	
@@ -31,9 +30,7 @@ public class QueueProducer {
 			QueueSender queueSender = session.createSender(queue);
 			TextMessage msg = session.createTextMessage(text);
 			queueSender.send(msg);
-			queueSender.close();
-			//return text;
-			
+			queueSender.close();			
 		}
 		
 }

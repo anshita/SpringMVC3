@@ -15,7 +15,7 @@ public class Browser
     public static void main(String[] args) throws Exception
     {
        // get the initial context
-    	   InitialContext ctx = (InitialContext) QueueConsumer.getInitialContext();
+    	 InitialContext ctx = (InitialContext) QueueConsumer.getInitialContext();
                                                                           
        // lookup the queue object
        Queue queue = (Queue) ctx.lookup("queue/testQueue");
