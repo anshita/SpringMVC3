@@ -47,7 +47,7 @@ public class AsyncReceiver implements MessageListener, ExceptionListener
        queueConn.start();
                                                                           
        // wait for messages
-       System.out.print("waiting for messages");
+       System.out.print("waiting for messages  ");
        for (int i = 0; i < 10; i++) {
           Thread.sleep(1000);
           System.out.print(".");
